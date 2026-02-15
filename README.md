@@ -2,10 +2,10 @@
 A python-based email analysis tool that inspects raw .eml files to detect impersonation and phishing attempts using identity-mismatch heuristics and rule-based scoring. 
 
 ## Overview
-This email identity checker is a lightweight email analysis tool that evaluates '.eml' files against configurable identity protection rules. It detects: 
-    - Display name spoofing 
-    - Protected identity mismatches 
-    - Requests for personally identifiable information (SSN, credit card number, etc.)
+This email identity checker is a lightweight email analysis tool that evaluates '.eml' files against configurable identity protection rules. It detects: \n
+    - Display name spoofing \n
+    - Protected identity mismatches \n 
+    - Requests for personally identifiable information (SSN, credit card number, etc.)\n
 
 The system generates a verdict (allow, flag, quarantine) along with a confidence score and detailed reasoning for transparency. This project simulates real-world email security mechanisms used in secure mail gateways and phishing detection systems. 
 
