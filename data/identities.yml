@@ -1,0 +1,103 @@
+#Domains listed below
+# are either from our own organization or from trusted partners.
+org_domains:
+  - 12amlegal.com
+
+exempt_domains:
+  - trustedpartner.com
+
+#List of identities that are protected from de-identification
+protected_identities:
+  "Henry Fonda (CEO)":
+    - hfonda@12amlegal.com
+  "Lee Cobb (CFO)":
+    - lcobb@12amlegal.com
+  "Ed Begley (CTO)":
+    - ebegley@12amlegal.com
+  "Jack Warden (Payroll)":
+    - jwarden@12amlegal.com
+  "E.G. Marshall (Accounts Payable)":
+    - egmarshall@12amlegal.com
+  "Jack Klugman (Finance Operations Manager)":
+    - jklugman@12amlegal.com
+  "Joseph Sweeney (Human Resources)":
+    - jsweeney@12amlegal.com
+  "John Fiedler (Benefits Administrator)":
+    - jfielder@12amlegal.com
+  "George Voskovec (IT Support)":
+    - gvoskovec@12amlegal.com
+  "Edward Binns (Information Security)":
+    - ebinns@12amlegal.com
+  "Robert Webber (System Administrator)":
+    - rwebber@12amlegal.com
+  "Martin Balsam (Compliance Officer)":
+    - mbalsam@12amlegal.com
+
+  # Shared role inboxes (protected)
+  "Help Desk":
+    - helpdesk@12amlegal.com
+  "Payroll":
+    - payroll@12amlegal.com
+  "HR":
+    - hr@12amlegal.com
+  "Accounts Payable":
+    - ap@12amlegal.com
+  "System Administrator":
+    - sysadmin@12amlegal.com
+  "Compliance":
+    - compliance@12amlegal.com
+
+#Mapping of display names to aliases for de-identification
+display_name_aliases:
+  "Henry Fonda": "Henry Fonda (CEO)"
+  "Lee Cobb": "Lee Cobb (CFO)"
+  "Ed Begley": "Ed Begley (CTO)"
+  "Jack Warden": "Jack Warden (Payroll)"
+  "E.G. Marshall": "E.G. Marshall (Accounts Payable)"
+  "Jack Klugman": "Jack Klugman (Finance Operations Manager)"
+  "Joseph Sweeney": "Joseph Sweeney (Human Resources)"
+  "John Fiedler": "John Fiedler (Benefits Administrator)"
+  "George Voskovec": "George Voskovec (IT Support)"
+  "Edward Binns": "Edward Binns (Information Security)"
+  "Robert Webber": "Robert Webber (System Administrator)"
+  "Martin Balsam": "Martin Balsam (Compliance Officer)"
+
+  # These map to themselves so "Help Desk" resolves to the protected key "Help Desk"
+  "Help Desk": "Help Desk"
+  "Payroll": "Payroll"
+  "HR": "HR"
+  "Accounts Payable": "Accounts Payable"
+  "System Administrator": "System Administrator"
+  "Compliance": "Compliance"
+
+#Weights assigned to each identity for impersonation score
+identity_weights:
+  "Henry Fonda (CEO)": 10.0
+  "Lee Cobb (CFO)": 9.0
+  "Ed Begley (CTO)": 9.0
+  "Jack Warden (Payroll)": 7.0
+  "E.G. Marshall (Accounts Payable)": 8.0
+  "Jack Klugman (Finance Operations Manager)": 8.0
+  "Joseph Sweeney (Human Resources)": 6.0
+  "John Fiedler (Benefits Administrator)": 6.0
+  "George Voskovec (IT Support)": 5.0
+  "Edward Binns (Information Security)": 8.0
+  "Robert Webber (System Administrator)": 10.0
+  "Martin Balsam (Compliance Officer)": 7.0
+
+  # Optional weights for shared mailboxes (you can tune these)
+  "Help Desk": 6.0
+  "Payroll": 7.0
+  "HR": 6.0
+  "Accounts Payable": 8.0
+  "System Administrator": 9.0
+  "Compliance": 7.0
+
+#Thresholds for impersonation scores
+score_thresholds:
+  quarantine: 80.0
+  tag: 40.0
+
+normalize:
+  casefold: true
+  collapse_spaces: true
